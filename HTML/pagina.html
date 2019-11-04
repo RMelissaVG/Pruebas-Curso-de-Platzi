@@ -8,13 +8,14 @@
         <title>Yuumisaan</title>
     </head>
     <style>
+      
         body{
             margin: 0%;
             font-family: 'Muli',sans-serif;
-            background-color: black ;
+            background-color: white ;
         }
         .header{
-            background-color: #f88020;
+            background-color: white;
             width: 100%;
             height: 100px;
             display: flex;
@@ -22,8 +23,9 @@
             align-items: center;
         }
         .header__img{
-            width:90px;
-            margin-left: 10px;
+            width:300px;
+            margin-left: 25px;
+            margin-right: 10px;
         }
         .header__menu{
             margin-right: 30px;
@@ -35,11 +37,11 @@
             position: absolute;
             width: 100px;
             text-align: right;
-            margin: 0px 0px 0px -2px;
+            margin: 0px 0px 0px -12px;
         }
         .header__menu:hover ul, ul:hover {
             display: block;
-            background-color: #ffc0d0;
+            background-color: white;
             padding: 0px 10px;
             border-radius: 10%;
 
@@ -48,7 +50,7 @@
             margin: 10px 0px;
         }
         .header__menu li a{
-            color: #940a37;
+            color: black;
             text-decoration: none;
         }
         .header__menu li a:hover {
@@ -68,37 +70,100 @@
         }
         .header__menu--profile p {
             margin: 0px;    
-            color: white;
+            color: black;
         }
         .main{
             height: 300px;
         }
         .main__title{
-            color: white;
+            color: black;
             font-size: 25px;
         }
         .input{
             background-color: rgba(255, 255, 2555, 0.1);
-            border: 2px solid white;
+            border: 2px solid black;
             border-radius: 25px;
-            color: #45454d;
+            color: black;
             font-family: 'Muli',sans-serif;
             font-size: 16px;
             height: 50px;
             padding: 0px 20px;
             width: 70%;
+            outline: none;
         }
         ::placeholder{
-            color: white;
+            color: black;
+        }
+        .carousel {
+            width: 100%;
+            overflow: scroll;
+            padding: 30px;
+            position: relative;
+        }
+        .carousel__container {
+            white-space: nowrap;
+            margin: 70px 0px;
+            padding-bottom: 10px;
+        }
+        .carousel-item {
+            background-color: white;
+            width: 200px;
+            height: 250px;
+            border-radius: 20px;
+            overflow: hidden;
+            margin-right: 10px;
+            display: inline-block;
+            cursor: pointer;
+            transition: 450ms all;
+            transform-origin: center left;
+            position: relative;
+        }
+        .carousel-item:hover ~ .carousel-item {
+            transform: translate3d(100px, 0, 0);
+        }
+        .carousel__container:hover .carousel-item {
+            opacity: 0.3;
+        }
+        .carousel__container:hover .carousel-item:hover {
+            transform: scale(1.5);
+            opacity: 1;
+        }
+        .carousel-item__img {
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+        }
+        .carousel-item__details {
+            background: linear-gradient(to top, rgba(0, 0, 0, 0.9) 0%, rgba(0, 0, 0, 0) 20%);
+            font-size: 10px;
+            opacity: 1;
+            transition: 450ms opacity ;
+            padding: 10px;
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+        }
+        .carousel-item__details--icon {
+            width: 40px;
+            height: 40px;
+        }
+        .carousel-item__details--title {
+            color: black;
+            margin: 2px;
+        }
+        .carousel-item__details:hover {
+            opacity: 1;
         }
 
     </style>
     <body>  
         <header class="header">
-            <img class="header__img" src="icono.png" alt="Icono">
+            <img class="header__img" src="nombreara3.png" alt="Icono">
             <div class="header__menu">
                 <div class="header__menu--profile">
-                    <img src="./icono_perfil.png" alt="">
+                    <img src="./icono_perfil2.png" alt="">
                     <p>Perfil</p>
                 </div>
                 <ul>
@@ -109,8 +174,42 @@
         </header>
 
         <section class="main"> 
-            <h2 class="main__title">Que quieres ver hoy?</h2>
+            <h2 class="main__title">¿Qué quieres ver hoy?</h2>
             <input class="input" type="text" placeholder="Buscar...">
+        </section>
+
+        <section class="carousel">
+            <div class="carousel__container" >
+                <div class="carousel-item" >
+                    <img class="carousel-item__img" src="./img2.png" alt="imagen de los videos">
+                    <div class="carousel-item__details">
+                        <div>
+                            <img class="carousel-item__details--icon" src="./yutubi.png" alt="icono de yutub">
+                        </div>
+                        <p class="carousel-item__details--title">Videos en YouTube</p>
+                    </div>
+                </div>
+                <div class="carousel-item" >
+                        <img class="carousel-item__img" src="./img3.jpg" alt="imagen de stats">
+                        <div class="carousel-item__details">
+                            <div>
+                                <img class="carousel-item__details--icon" src="./stats.png" alt="icono de yutub">
+                            </div>
+                            <p class="carousel-item__details--title">Stats</p>
+                        </div>
+                </div>
+                <div class="carousel-item" >
+                        <img class="carousel-item__img" src="./img5.png" alt="imagen de equipment">
+                        <div class="carousel-item__details">
+                            <div>
+                                <img class="carousel-item__details--icon" src="./equip.png" alt="icono de yutub">
+                            </div>
+                            <p class="carousel-item__details--title">Equipment</p>
+                        </div>
+                </div>
+
+                <div class="carousel-item" ></div>                                
+            </div>               
         </section>
     </body>
 </html>
