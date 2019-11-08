@@ -8,7 +8,6 @@
         <title>Yuumisaan</title>
     </head>
     <style>
-      
         body{
             margin: 0%;
             font-family: 'Muli',sans-serif;
@@ -16,7 +15,6 @@
             opacity: 1;
             background-image: url("loto4.png");
             background-size: 1000px; 
-            
 
         }
         .header{
@@ -88,6 +86,13 @@
         .main__title{
             color: black;
             font-size: 30px;
+            font-weight: lighter;
+        }
+        .categories__title{
+            color: black;
+            position: absolute;
+            padding-left: 30px;
+            width: 100%;
             font-weight: lighter;
         }
         .input{
@@ -167,11 +172,23 @@
         .carousel-item__details:hover {
             opacity: 1;
         }
-
-        .footer{
-            background-color: black;
-            color: blanchedalmond;
+        .footer {
             display: flex;
+            align-items: center;
+            height: 50px;
+            width: 100%;
+            background-color: pink ;
+        }
+        .footer a {
+            color: white;
+            font-size: 14px ;
+            font-family:'Muli',sans-serif ;
+            cursor: pointer;
+            padding-left: 30px;
+            text-decoration: none;
+        }
+        .footer a:hover{
+            text-decoration: underline;
         }
 
     </style>
@@ -194,6 +211,8 @@
             <h2 class="main__title">¿Qué quieres ver hoy?</h2>
             <input class="input" type="text" placeholder="Buscar...">
         </section>
+
+        <h2 class="categories__title"> Mi Ara</h2>
 
         <section class="carousel">
             <div class="carousel__container" >
@@ -241,13 +260,13 @@
                             </div>
                             <p class="carousel-item__details--title">FAQ</p>
                         </div>
-                </div>
-
-                <div class="carousel-item" ></div>      
-                
+                </div>  
             </div>              
         </section>
-
-        <footer class="footer">Hola</footer>
+        <footer class="footer">
+            <a href="/">Terminos de Uso</a>
+            <a href="/">Declaracion de privacidad</a>
+            <a href="/">Centro de ayuda</a>
+        </footer> 
     </body>
 </html>
